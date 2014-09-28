@@ -2,7 +2,9 @@ Cake php basic configuration
 ================================
 ####Set configuration
 -Make a folder under /app/ as name 'tmp' and permite chmod 777 ......
+
 -Change in app/Config/core.php  to 'Security.salt' value like DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi2014
+
 -Change in app/Config/core.php  to 'Security.cipherSeed' value like 768593096574535424967496836452014
 
 

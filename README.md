@@ -1,7 +1,10 @@
 Cake php basic configuration
 ================================
 ####Set configuration
--Make a folder under /app/ as name 'tmp' and permite chmod 777 /var/www/test/cakephp-basic/app/tmp -R
+-Make a folder under /app/ as name 'tmp' and run command in terminal
+ ```
+ chmod 777 /var/www/test/cakephp-basic/app/tmp -R
+ ```
 
 -Change in app/Config/core.php  to 'Security.salt' value like DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi2014
 

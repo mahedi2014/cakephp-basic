@@ -35,8 +35,10 @@ class AppController extends Controller {
     //load auth component
     public $component = array('Auth', 'Session');
 
+//    public $layout = 'user';
+
     public function beforeRender()
     {
-        $this->layout = 'user';
+
     }
 }

@@ -8,6 +8,26 @@
 
             <div class="pull-right">
                 <span style="font-size:11px;">Don't have any account?</span>
+                <?php
+                echo $this->Html->link(
+                    'Sign up',
+                    '/uses',
+                    array('class' => 'btn btn-default btn-xs login-lin', 'target' => '_blank')
+                );
+                ?>
+                or
+                <?php
+                echo $this->Html->link(
+                    'Sign up',
+                    array(
+                        'controller' => 'uses',
+                        'action' => 'index',
+                    ),
+                    array('class' => 'btn btn-default btn-xs login-lin', 'target' => '_blank')
+                );
+                ?>
+                or
+
                 <a class="btn btn-default btn-xs login-link" href="register.html" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Sign up</a>
             </div>
         </div>

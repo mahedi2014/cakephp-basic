@@ -12,7 +12,7 @@ class UsersController extends AppController {
 
     public function form()
     {
-        if($this->request->is('post')){
+        if($this->request->is('get')){
             $this->User->save($this->request->data);
         }
         $result = $this->User->getInfo();

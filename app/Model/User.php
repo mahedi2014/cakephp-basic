@@ -1,7 +1,5 @@
 <?php
 App::uses('AppModel', 'Model');
-App::uses('AuthComponent', 'Controller/Component');
-
 
 class User extends AppModel {
 
@@ -19,5 +17,6 @@ class User extends AppModel {
     {
         return $this->find('all');
     }
+
 
 }

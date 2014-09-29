@@ -1,38 +1,64 @@
-<?php
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <?php echo $this->Html->charset(); ?>
-    <title>
-        <?php echo $cakeDescription ?>:
-        <?php echo $title_for_layout; ?>
-    </title>
-    <?php
-    echo $this->Html->meta('icon');
 
-    echo $this->Html->css('cake.generic');
+    <title>Login</title>
+
+    <?php
+    echo $this->Html->meta(
+        'keywords',
+        'cakephpbasic'
+    );
+    echo $this->Html->meta(
+        'description',
+        'a test project of cake php basic'
+    );
 
     echo $this->fetch('meta');
+
+    echo $this->Html->css(
+        array(
+            'font-awesome.min',
+            'endless.min',
+            '/bootstrap/css/bootstrap.min'
+        )
+    );
     echo $this->fetch('css');
-    echo $this->fetch('script');
     ?>
+
 </head>
+
 <body>
-<div id="container">
-    <div id="header">
-        <h1>Welcome to custom template test</h1>
-    </div>
-    <div id="content">
 
-        <?php echo $this->Session->flash(); ?>
-
-        <?php echo $this->fetch('content'); ?>
+<div class="login-wrapper">
+    <div class="text-center">
+        <h2 class="fadeInUp animation-delay8" style="font-weight:bold">
+            <span class="text-success">Endless</span> <span style="color:#ccc; text-shadow:0 1px #fff">Admin</span>
+        </h2>
     </div>
-    <div id="footer">This is footer</div>
-</div>
+    <?php echo $this->fetch('content'); ?>
+</div><!-- /login-wrapper -->
+
+<!-- javascript -->
+
+
+<?php
+echo $this->Html->script(
+    array(
+        'fjs/jquery-1.10.2.min',
+        'bootstrap/js/bootstrap.min',
+        'js/modernizr.min',
+        'js/pace.min',
+        'js/jquery.popupoverlay.min',
+        'js/jquery.slimscroll.min',
+        'js/jquery.cookie.min',
+        'js/endless/endless'
+
+    )
+);
+echo $this->fetch('script');
+?>
+
 </body>
 </html>

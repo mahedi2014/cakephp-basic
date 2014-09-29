@@ -11,7 +11,7 @@
                 <?php
                 echo $this->Html->link(
                     'Sign up',
-                    '/uses',
+                    '/users',
                     array('class' => 'btn btn-default btn-xs login-lin', 'target' => '_blank')
                 );
                 ?>
@@ -20,7 +20,7 @@
                 echo $this->Html->link(
                     'Sign up',
                     array(
-                        'controller' => 'uses',
+                        'controller' => 'users',
                         'action' => 'index',
                     ),
                     array('class' => 'btn btn-default btn-xs login-lin', 'target' => '_blank')
@@ -28,7 +28,7 @@
                 ?>
                 or
 
-                <a class="btn btn-default btn-xs login-link" href="register.html" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Sign up</a>
+                <a class="btn btn-default btn-xs login-link" href="/users" style="margin-top:-2px;"><i class="fa fa-plus-circle"></i> Sign up</a>
             </div>
         </div>
         <div class="panel-body">

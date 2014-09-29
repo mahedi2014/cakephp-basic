@@ -15,8 +15,6 @@
         'a test project of cake php basic'
     );
 
-    echo $this->fetch('meta');
-
     echo $this->Html->css(
         array(
             'font-awesome.min',
@@ -24,7 +22,10 @@
             '/bootstrap/css/bootstrap.min'
         )
     );
-    echo $this->fetch('css');
+
+    echo $this->fetch('meta');
+    echo $this->fetch('cssHead'); //to set css in head from view
+    echo $this->fetch('scriptHead'); //to set js in head from view
     ?>
 
 </head>
@@ -57,7 +58,10 @@ echo $this->Html->script(
 
     )
 );
-echo $this->fetch('script');
+
+echo $this->fetch('cssBottom'); //to set css in bottom from view
+echo $this->fetch('scriptBottom'); //to set js in bottom from view
+
 ?>
 
 </body>

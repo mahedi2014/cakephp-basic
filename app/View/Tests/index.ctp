@@ -42,3 +42,26 @@
         </div>
     </div><!-- /panel -->
 </div><!-- /login-widget -->
+
+<?php
+//to add css in head
+$this->start('cssHead');
+//css code will be here
+$this->end();
+
+//to add css in bottom
+$this->start('cssBottom');
+//css code will be here
+$this->end();
+
+//to add js in head
+$this->start('jsHead');
+//js code will be here
+$this->end();
+
+//to add js in bottom
+$this->start('jsBottom');
+//js code will be here
+$this->end();
+
+?>

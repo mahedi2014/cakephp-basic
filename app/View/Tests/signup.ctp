@@ -67,6 +67,7 @@
     </div><!-- /panel -->
 </div><!-- /login-widget -->
 
+
 <?php
 //to add css in head
 $this->start('cssHead');

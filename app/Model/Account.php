@@ -10,4 +10,19 @@ class Account extends AppModel {
         }
         return true;
     }
+
+    public function login()
+    {
+        if($this->request->is('post'))
+        {
+            $this->loadModel('User');
+            if ($this->request->is('post')) {
+                if ($this->Auth->login()) {
+                    var_dump(1); die();
+                }
+                $this->Session->setFlash(__('Invalid username or password, try again'));
+            }
+
+        }
+    }
 }

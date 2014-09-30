@@ -12,7 +12,10 @@ class User extends AppModel {
             'rule' => array('minLength', '8'),
             'message' => 'Mimimum 8 characters long'
         ),
-        'email' => 'email'
+        'email' => array(
+            'rule' => 'isUnique',
+            'message' => 'This field must not be empty!'
+        ),
     );
 
     //make password encription before save to database

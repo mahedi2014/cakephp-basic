@@ -35,11 +35,11 @@
 //	Router::connect('/users/*', array('controller' => 'users', 'action' => 'index'));
 
 
-	Router::connect('/', array('controller' => 'users', 'action' => 'index'));
+//	Router::connect('/', array('controller' => 'users', 'action' => 'index'));
 
-	Router::connect('/tests', array('controller' => 'tests', 'action' => 'index'));
+//	Router::connect('/tests', array('controller' => 'tests', 'action' => 'index'));
 
-	Router::connect('/login', array('controller' => 'accounts', 'action' => 'index'));
+	Router::connect('/', array('controller' => 'accounts', 'action' => 'index'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

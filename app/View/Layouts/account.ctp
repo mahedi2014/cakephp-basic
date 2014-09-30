@@ -31,7 +31,7 @@
 </head>
 
 <body>
-
+<?php echo $this->Session->flash(); ?>
 <div class="login-wrapper">
     <div class="text-center">
         <h2 class="fadeInUp animation-delay8" style="font-weight:bold">
@@ -59,6 +59,7 @@ echo $this->Html->script(
 
     )
 );
+
 
 echo $this->fetch('cssBottom'); //to set css in bottom from view
 echo $this->fetch('scriptBottom'); //to set js in bottom from view

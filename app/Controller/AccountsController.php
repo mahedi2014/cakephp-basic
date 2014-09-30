@@ -31,6 +31,23 @@ class AccountsController extends AppController {
     {
         $this->pageTitle = 'Sign up';
 
+
+        if($this->request->is('post'))
+        {
+            $this->loadModel('User');
+            $this->User->set(
+                array(
+                    'uuid' => String::uuid(),
+                    'visible' => '1',
+                    'created_at' => date('y-m-d h:i:s'),
+                    'updated_at' => date('y-m-d h:i:s')
+                )
+            );
+            $this->User->save($this->request->data);
+            $this->Session->setFlash('Data Saved!', 'flash_success'); //make a flash
+            $this->redirect(array('controller'=>'accounts', 'action'=>'index')); //redirect page to /users/index
+        }
+
     }
 
 }

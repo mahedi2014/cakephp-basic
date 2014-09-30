@@ -21,6 +21,7 @@
                 ?>
             </div>
         </div>
+
         <div class="panel-body">
             <?php
             echo $this->Form->create('account', array('action'=>'signup', 'type' => 'post'));
@@ -29,26 +30,48 @@
                         'class' => 'form-group'
                     ),
                     'label' => 'Username',
-                    'class' => 'form-control input-sm bounceIn animation-delay2'
+                    'class' => 'form-control input-sm bounceIn animation-delay2',
+                    'type' => 'text',
+                    'placeholder' => 'Enter username'
+                )
+            );
+            echo $this->Form->input('User.email', array(
+                    'div' => array(
+                        'class' => 'form-group'
+                    ),
+                    'label' => 'Email',
+                    'class' => 'form-control input-sm bounceIn animation-delay4',
+                    'type' => 'text',
+                    'placeholder' => 'Enter email address'
                 )
             );
             echo $this->Form->input('User.password', array(
                     'div' => array(
                         'class' => 'form-group'
                     ),
-                    'label' => 'Username',
-                    'class' => 'form-control input-sm bounceIn animation-delay4'
+                    'label' => 'Password',
+                    'class' => 'form-control input-sm bounceIn animation-delay4',
+                    'type' => 'password',
+                    'placeholder' => 'Enter password'
+                )
+            );
+            echo $this->Form->input('RePassword', array(
+                    'div' => array(
+                        'class' => 'form-group'
+                    ),
+                    'label' => 'Re-Password',
+                    'class' => 'form-control input-sm bounceIn animation-delay4',
+                    'type' => 'password',
+                    'placeholder' => 'Type password again'
                 )
             );
 
-            echo '<hr/>';
+            echo ' <hr/>';
             echo $this->Form->input('Submit', array(
-                    'label' => false,
-                    'class' => 'btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right',
-                    'type' => 'submit'
-                )
-            );
-
+                'class' => 'btn btn-success btn-sm bounceIn animation-delay5 login-link pull-right',
+                'type' => 'submit',
+                'label' => false
+            ));
             ?>
 
         </div>
